@@ -1,0 +1,146 @@
+/*===========================*/
+body {
+  margin: 0;
+}
+
+.main {
+  width: 350px;
+  height: 600px;
+  overflow: auto;
+  background-color: #767478;
+  border: 1px solid #2B65D7;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-title {
+  font-size: 36px;
+  color: #ffffff;
+  text-align: center;
+}
+
+input {
+  height: 30px;
+  width: 95%;
+  text-align: center;
+  margin-left: 4px;
+}
+
+.tasks-list {
+  overflow: auto;
+  height: 370px;
+  max-width: 100%;
+  border: 1px solid #ffffff;
+  margin: 5px 5px;
+  padding: 0;
+  padding-left: 10px;
+}
+.tasks-list .task {
+  align-items: center;
+  width: 95%;
+  max-width: 95%;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+}
+.tasks-list .task span .remove-icon {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  z-index: 5;
+  bottom: 10px;
+  width: 100%;
+}
+.btns .btn {
+  padding: 15px 25px;
+  border-radius: 10px;
+  outline: none;
+  color: #ffffff;
+  background-color: #D72B2B;
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+}
+.btns .btn:focus {
+  transform: scale(0.9);
+  transition: all 0.3s ease-in-out 0s;
+}
+.btns .blue {
+  padding: 15px 25px;
+  border-radius: 10px;
+  outline: none;
+  color: #ffffff;
+  background-color: #D72B2B;
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+  background-color: #2B65D7;
+}
+.btns .blue:focus {
+  transform: scale(0.9);
+  transition: all 0.3s ease-in-out 0s;
+}
+.btns .green {
+  padding: 15px 25px;
+  border-radius: 10px;
+  outline: none;
+  color: #ffffff;
+  background-color: #D72B2B;
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out 0s;
+  background-color: #2BD73C;
+}
+.btns .green:focus {
+  transform: scale(0.9);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.overlay-help {
+  height: 100%;
+  width: auto;
+  background-color: #3E3843;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  display: none;
+}
+.overlay-help .close-overlay {
+  position: absolute;
+  z-index: 6;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: 700;
+  background-color: #D72B2B;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  transition: all 0.3s ease-in-out 0s;
+}
+.overlay-help .close-overlay:focus {
+  transform: scale(0.9);
+  transition: all 0.3s ease-in-out 0s;
+}
+.overlay-help .help-list {
+  margin-top: 20px;
+  color: #ffffff;
+  padding-top: 120px;
+  margin-left: -10px;
+}
+.overlay-help .help-list li {
+  margin: 5px 0;
+}

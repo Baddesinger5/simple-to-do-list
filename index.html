@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+</head>
+<body>
+
+    <div class="main">
+        <h1 class="main-title">My To-Do List</h1>
+
+        <input type="text" id="add-to-do" placeholder="Add new Task" maxlength="35" minlength="1" >
+
+        <!-- max symbols 45! -->
+        <ul class="tasks-list">
+            <!-- <li class="task">Вымыть посуду <span><a class="remove-icon" href="">&#10006;</span></a></li> -->
+        </ul>
+
+        <div class="btns">
+            <button class="btn" id="help">help</button>
+            <button class="btn blue">clear list</button>
+            <button class="btn green">add task</button>
+        </div>
+
+        <div class="overlay-help">
+            <button class="close-overlay" id="close">X</button>
+            <ul class="help-list">
+                    <li>For add new task, click at green button or input place</li>
+                    <li>For clear all tasks, click blue button</li>
+                    <li>For removing one of the tasks, click trashcan</li>
+                    <li>Nothing to edit tasks, that`s right</li>
+                    <li>Maximum bymbols - 45.</li>
+            </ul>
+        </div>
+    </div>
+
+    
+
+
+    <script src="main.js"></script>
+</body>
+</html>
