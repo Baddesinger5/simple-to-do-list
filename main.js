@@ -12,10 +12,10 @@ clsBtn.addEventListener('click', function() {
 });
 
 // add task
-
 let addToDo = document.querySelector('.green');
 
-addToDo.addEventListener('click', function(){
+let createElement = addToDo.addEventListener('click', function(){
+    //create task
     let input = document.querySelector('input').value;
     let ul = document.querySelector('.tasks-list');
 
@@ -38,7 +38,6 @@ addToDo.addEventListener('click', function(){
     createLi.append(createSpan, createLink);
 
     // removing task
-
     createLink.addEventListener('click', function(e) {
         e.preventDefault();
         createLink.remove();
@@ -48,8 +47,10 @@ addToDo.addEventListener('click', function(){
     // clear all tasks
     let clearBtn = document.querySelector('.blue');
     clearBtn.addEventListener('click', function(){
+        localStorage.clear();
         createLi.remove('li');
     })
 })
+
 
 
