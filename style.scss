@@ -1,16 +1,16 @@
-@mixin  btns() {
-    padding: 15px 25px;
-    border-radius: 10px;
-    outline: none;
-    color: #ffffff;
-    background-color: #D72B2B;
+@mixin btn {
+    padding: 15px 40px;
     border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    color: #ffffff;
     text-transform: capitalize;
+    outline: none;
+    transition: all 0.2s ease-in-out 0s;
     cursor: pointer;
-    transition: all 0.3s ease-in-out 0s;
     &:focus {
-        transform: scale(0.9);
-        transition: all 0.3s ease-in-out 0s;
+        transition: all 0.2s ease-in-out 0s;
+        transform: scale(0.8);
     }
 }
 
@@ -19,111 +19,56 @@ body {
     margin: 0;
 }
 .main {
-    width: 350px;
-    height: 600px;
-    overflow: auto;
-    background-color: #767478;
-    border: 1px solid #2B65D7;
     position: absolute;
-    z-index: 1;
-    top: 50%;
     left: 50%;
+    top: 10%;
     transform: translate(-50%, -50%);
-}
-.main-title {
-    font-size: 36px;
-    color: #ffffff;
-    text-align: center;
-}
-input {
-    height: 30px;
-    width: 95%;
-    text-align: center;
-    margin-left: 4px;
-    transition: all 0.3s ease-in-out 0s;
-    &:focus {
-        outline: none;
-        box-shadow: 0px 0px 42px 1px #3F3F3F;
-        transition: all 0.3s ease-in-out 0s;
+    & .todo-list-title {
+        font-size: 40px;
+        color: #000000;
+        text-align: center;
     }
-}
-.tasks-list {
-    overflow: auto;
-    height: 370px;
-    max-width: 100%;
-    border: 1px solid #ffffff;
-    margin: 5px 5px;
-    padding: 0;
-    padding-left: 10px;
-    & .task {
-        align-items: center;
-        width: 95%;
-        max-width: 95%;
-        display: flex;
-        justify-content: space-between;
-        color: #ffffff;
-        & span {
-            & .remove-icon{
-                text-decoration: none;
-                color: #ffffff;
-                font-size: 20px;
-            }
+    & input {
+        width: 500px;
+        height: 40px;
+        margin: 0 auto;
+        outline: none;
+        border-radius: 5px;
+        border: 1 px solid  #000000;
+        transition: all 0.2s ease-in-out 0s;
+        &:focus {
+            border: 2px solid #0075FF;
+            box-shadow: 0px 0px 85px -18px #0075FF;
+            transition: all 0.2s ease-in-out 0s;
+        }
+    }
+    & .list {
+        position: absolute;
+        z-index: 5;
+        width: 100%;
+        height: 360px;
+        overflow-y: scroll;
+        & li {
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+            padding-bottom: 10px;
         }
     }
 }
-.btns {
-    display: flex;
-    justify-content: space-around;
+ .buttons {
+    text-align: center;
     position: absolute;
-    z-index: 5;
-    bottom: 10px;
-    width: 100%;
-    & .btn {
-        @include btns();
+    top: 60%;
+    left: 50%;
+    transform: translate((-50%, -50%));
+    & .add {
+        background-color: #0075FF;
+        @include btn();
     }
-    & .blue {
-        @include btns();
-        background-color: #2B65D7;
-    }
-    & .green {
-        @include btns();
-        background-color: #2BD73C;
+    & .remove-all{
+        background-color: #FF0000;
+        @include btn();
     }
 }
 
-.overlay-help {
-    height: 100%;
-    width: auto;
-    background-color: #3E3843;
-    position: absolute;
-    z-index: 5;
-    top: 0;
-    display: none;
-    & .close-overlay {
-        position: absolute;
-        z-index: 6;
-        right: 10px;
-        top: 10px;
-        cursor: pointer;
-        color: #ffffff;
-        font-weight: 700;
-        background-color: #D72B2B;
-        outline: none;
-        border: none;
-        padding: 10px 15px;
-        transition: all 0.3s ease-in-out 0s;
-        &:focus {
-            transform: scale(0.9);
-            transition: all 0.3s ease-in-out 0s;
-        }
-    }
-    & .help-list {
-        margin-top: 20px;
-        color: #ffffff;
-        padding-top: 120px;
-        margin-left: -10px;
-        & li {
-            margin: 5px 0;
-        }
-    }
-}
