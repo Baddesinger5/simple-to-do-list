@@ -45,6 +45,7 @@ body {
 .main .list span {
   position: absolute;
   right: 10%;
+  cursor: pointer;
 }
 
 .buttons {
