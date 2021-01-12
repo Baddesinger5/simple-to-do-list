@@ -47,6 +47,10 @@ body {
   right: 10%;
   cursor: pointer;
 }
+.main .list span a {
+  text-decoration: none;
+  color: #000000;
+}
 
 .buttons {
   text-align: center;
