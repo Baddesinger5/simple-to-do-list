@@ -63,11 +63,14 @@ const makeLi = function (value) {
     // //delete one task
     function removeItem() {
         let eachItem = this;
-            createLink.addEventListener('click', function(e) {
+            let deleteTask = createLink.addEventListener('click', function(e) {
                 e.preventDefault();
                 createLi.remove(eachItem);
                 createLink.remove(eachItem);
+
     })
+
+    
     } removeItem();
 
     return createLi;
@@ -90,13 +93,12 @@ removeAll.addEventListener('click', function() {
   getUl.innerHTML = '';
 })
 
-
-let liMaker = addBtn.addEventListener('click', function() {
+const storageItems = JSON.parse(localStorage.storageItems || '[]');
+addBtn.addEventListener('click', function() {
     
-		const value = input.value;
+	const value = input.value;
     
     // Add item to storage
-    const storageItems = JSON.parse(localStorage.storageItems || '[]');
     storageItems.push(value);
     localStorage.storageItems = JSON.stringify(storageItems);
     input.value = '';

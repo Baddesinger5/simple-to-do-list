@@ -55,7 +55,7 @@ body {
 .buttons {
   text-align: center;
   position: absolute;
-  top: 60%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -92,4 +92,53 @@ body {
 .buttons .remove-all:focus {
   transition: all 0.2s ease-out 0s;
   transform: scale(0.8);
+}
+
+/*=========================*/
+@media only screen and (max-width: 696px) {
+  .buttons .add {
+    margin: 5px auto;
+  }
+  .buttons .remove-all {
+    margin: 5px auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main .todo-list-title {
+    font-size: 30px;
+  }
+  .main input {
+    width: 300px;
+    height: 30px;
+    margin: 0 auto;
+  }
+  .main .list {
+    width: 100%;
+  }
+  .main .list .row {
+    font-size: 16px;
+  }
+  .main .list .row span {
+    right: 15%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .main .todo-list-title {
+    font-size: 24px;
+  }
+  .main input {
+    width: 250px;
+    height: 20px;
+    margin: 0 auto;
+  }
+  .main .list {
+    width: 100%;
+    padding-left: 20px;
+  }
+  .main .list .row {
+    font-size: 14px;
+  }
+  .main .list .row span {
+    right: 10%;
+  }
 }
