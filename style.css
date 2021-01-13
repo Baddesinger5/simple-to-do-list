@@ -70,9 +70,10 @@ body {
   outline: none;
   transition: all 0.2s ease-in-out 0s;
   cursor: pointer;
+  transform: scale(1);
 }
 .buttons .add:focus {
-  transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-out 0s;
   transform: scale(0.8);
 }
 .buttons .remove-all {
@@ -86,8 +87,9 @@ body {
   outline: none;
   transition: all 0.2s ease-in-out 0s;
   cursor: pointer;
+  transform: scale(1);
 }
 .buttons .remove-all:focus {
-  transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-out 0s;
   transform: scale(0.8);
 }
