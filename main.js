@@ -63,21 +63,30 @@ const makeLi = function (value) {
     // //delete one task
     function removeItem() {
         let eachItem = this;
-            let deleteTask = createLink.addEventListener('click', function(e) {
+            createLink.addEventListener('click', function(e) {
                 e.preventDefault();
                 createLi.remove(eachItem);
                 createLink.remove(eachItem);
-
-    })
-
-    
+            })
     } removeItem();
-
     return createLi;
 }
 
+// add task on keypressed
+input.addEventListener('keyup', function(keyPressed) {
+    if (keyPressed.keyCode == 13) {
+        const value = input.value;
+    
+        // Add item to storage
+        storageItems.push(value);
+        localStorage.storageItems = JSON.stringify(storageItems);
+        input.value = '';
+
+        getUl.appendChild(makeLi(value));
+    }
+})
 /*
-	Init first list
+    Init first list
 */
 JSON.parse(localStorage.storageItems || '[]').map(function(n) {
 	getUl.appendChild(makeLi(n));
@@ -94,7 +103,8 @@ removeAll.addEventListener('click', function() {
 })
 
 const storageItems = JSON.parse(localStorage.storageItems || '[]');
-addBtn.addEventListener('click', function() {
+
+let maker = addBtn.addEventListener('click', function() {
     
 	const value = input.value;
     
@@ -104,7 +114,10 @@ addBtn.addEventListener('click', function() {
     input.value = '';
 
     getUl.appendChild(makeLi(value));
+
 })
+
+
 
 
 
