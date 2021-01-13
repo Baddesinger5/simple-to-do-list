@@ -90,8 +90,7 @@ input.addEventListener('keyup', function(keyPressed) {
 */
 JSON.parse(localStorage.storageItems || '[]').map(function(n) {
 	getUl.appendChild(makeLi(n));
-})
-
+});
 
 // delete all
 const removeAll = document.querySelector('.remove-all');
@@ -100,7 +99,8 @@ removeAll.addEventListener('click', function() {
   createSpan.remove(); */
   localStorage.clear();
   getUl.innerHTML = '';
-})
+  window.location.reload();
+});
 
 const storageItems = JSON.parse(localStorage.storageItems || '[]');
 
