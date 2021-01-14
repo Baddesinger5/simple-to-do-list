@@ -65,9 +65,10 @@ const makeLi = function (value) {
         let eachItem = this;
             createLink.addEventListener('click', function(e) {
                 e.preventDefault();
-                createLi.remove(eachItem);
-                createLink.remove(eachItem);
-            })
+                createLi.style.opacity = 0.3;  // just change opacity if click at cross (remove one task)
+                // createLi.remove(eachItem);
+                // createLink.remove(eachItem);
+            });
     } removeItem();
     return createLi;
 }
@@ -99,7 +100,7 @@ removeAll.addEventListener('click', function() {
   createSpan.remove(); */
   localStorage.clear();
   getUl.innerHTML = '';
-  window.location.reload();
+  window.location.reload(); 
 });
 
 const storageItems = JSON.parse(localStorage.storageItems || '[]');
