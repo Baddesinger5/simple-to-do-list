@@ -59,16 +59,18 @@ const makeLi = function (value) {
     createLi.append(createSpan);
     createSpan.append(createLink);
     
-        
     // //delete one task
     function removeItem() {
-        let eachItem = this;
+        // let eachItem = this;  
+
             createLink.addEventListener('click', function(e) {
                 e.preventDefault();
-                createLi.style.opacity = 0.3;  // just change opacity if click at cross (remove one task)
+                createLi.style.opacity = 0.3// just change opacity if click at cross (remove one task)
+            
                 // createLi.remove(eachItem);
-                // createLink.remove(eachItem);
+                // createLink.remove(eachItem);   
             });
+            
     } removeItem();
     return createLi;
 }
