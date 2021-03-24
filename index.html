@@ -11,10 +11,10 @@
     <div class="main">
         <h1 class="todo-list-title">Create Your To-Do List</h1>
 
-        <input type="text" name="inppt-text" value="" placeholder="Enter your task" id="input" maxlength="30">
+        <input type="text" name="inppt-text" value="" placeholder="Enter your task" id="input" maxlength="50">
 
         <ul class="list">
-            <!-- <li class="row">jopa JOPA 123 <span><a href="#">&#10006;</a> </span></li> -->
+            <!-- <li class="row">jopa JOPA 123 <span><a class="delete-icon" href="#">&#10006;</a> </span></li> -->
         </ul>
 
     </div>
@@ -24,6 +24,19 @@
         <button class="remove-all">remove all</button>
     </div>
 
-    <script src="main.js"></script>
+    
+    <div class="overlay"></div>
+    <div class="warning-modal">
+        <p>Are you sure you want to delete all tasks?</p>
+
+        <div class="modal-buttons">
+            <button class="yes-modal-button">Yes</button>
+            <button class="no-modal-button">No</button>
+        </div>
+    </div>
+
+    <!-- <script src="main.js"></script> -->
+
+    <script src="script.js"></script>
 </body>
 </html>
